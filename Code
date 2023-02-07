@@ -1,78 +1,54 @@
 local player = game.Players.LocalPlayer
-
 local character = player.Character
-
 local humanoid = character:WaitForChild("Humanoid")
-
 local chat = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
 
 player.Chatted:Connect(function(message)
+  local text = message:match(".join%s+(%w+)")
+  if text then
+    for i,v in pairs(game.Workspace.Teams:GetChildren()) do
+      if string.find(v.Name, text) then
+        game:GetService("ReplicatedStorage").acceptedEvent:FireServer(v.Name)
+        break
+      end
+    end
+  end
 
   if message:match(".speed (%d+)") then
-
     local speed = tonumber(message:match(".speed (%d+)"))
-
     humanoid.WalkSpeed = speed
-
     if speed >= 80 then
-
       wait(3)
-
       chat:FireServer("I am speed!!!", "all")
-
     elseif speed > 30 then
-
       wait(3)
-
       chat:FireServer("Gotta go fast!", "all")
-
     end
 
   elseif message == ".IY" then
-
     local script = game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
-
     loadstring(script)()
 
   elseif message == ".reanimate" then
-
     local script = game:HttpGet("https://raw.githubusercontent.com/toldblock/GelatekHub/main/Main.lua")
-
     loadstring(script)()
 
   elseif message == ".tall" then
-
     local script = game:HttpGet("https://raw.githubusercontent.com/lostbunny489/tall-script/main/Code")
-
     loadstring(script)()
 
   elseif message == ".hatflingL" then
-
     local script = game:HttpGet("https://gist.githubusercontent.com/1BlueCat/544f7efbe88235666b5b7add65b7344d/raw/f20804bb85542dcc3bc938982e1f05b7ff05cded/FE%2520Hat%2520Fling")
-
     loadstring(script)()
 
   elseif message == ".IV" then
-
     local script = game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hexx/main/Iv%20Admin/Admin%202.lua")
-
     loadstring(script)()
 
   elseif message == ".search" then
-
     local script = game:HttpGet("https://raw.githubusercontent.com/lostbunny489/search-/main/Code")
-
     loadstring(script)()
-
-  elseif message == ".joingui" then
-
-    local script = game:HttpGet("https://raw.githubusercontent.com/lostbunny489/tall-script/main/Join%20team")
-
-    loadstring(script)()
-
   end
-
 end)
 
 chat:FireServer("Lost is daddy", "all")
-
