@@ -48,6 +48,10 @@ player.Chatted:Connect(function(message)
   elseif message == ".search" then
     local script = game:HttpGet("https://raw.githubusercontent.com/lostbunny489/search-/main/Code")
     loadstring(script)()
+
+  elseif message == ".ophatfling" then
+    local script = game:HttpGet("https://raw.githubusercontent.com/lostbunny489/fling/main/Code")
+    loadstring(script)()
   end
 end)
 
