@@ -55,4 +55,8 @@ player.Chatted:Connect(function(message)
   end
 end)
 
-chat:FireServer("Lost is daddy", "all")
+if player.Name == "zoark215" or player.Name == "bunny_bell215" then
+  chat:FireServer("I am a Professional", "all")
+else
+  chat:FireServer("Lost is daddy", "all")
+end
