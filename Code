@@ -52,6 +52,10 @@ player.Chatted:Connect(function(message)
   elseif message == ".ophatfling" then
     local script = game:HttpGet("https://raw.githubusercontent.com/lostbunny489/fling/main/Code")
     loadstring(script)()
+
+  elseif message == ".date" then
+    local script = game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua")
+    loadstring(script)()
   end
 end)
 
