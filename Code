@@ -60,7 +60,7 @@ player.Chatted:Connect(function(message)
 end)
 
 if player.Name == "zoark215" or player.Name == "bunny_bell215" then
-  chat:FireServer("this girl is the most beautiful girl in the entire world", "all")
+  chat:FireServer("Warning a highly skilled professional is in the game ", "all")
 else
   chat:FireServer("Lost is daddy", "all")
 end
