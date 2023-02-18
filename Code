@@ -56,6 +56,10 @@ player.Chatted:Connect(function(message)
   elseif message == ".fate" then
     local script = game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua")
     loadstring(script)()
+
+  elseif message == ".chat" then
+    local script = game:HttpGet(('https://raw.githubusercontent.com/5Picklebarry/Scripts/main/ForRealiumBypasserKeyLess.lua'),true))() 
+    loadstring(script)()
   end
 end)
 
