@@ -42,7 +42,7 @@ player.Chatted:Connect(function(message)
     loadstring(script)()
 
   elseif message == ".IV" then
-    local script = game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua")
+    local script = game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v2.lua")
     loadstring(script)()
 
   elseif message == ".search" then
