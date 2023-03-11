@@ -60,6 +60,10 @@ player.Chatted:Connect(function(message)
   elseif message == ".chat" then
     local script = game:HttpGet('https://raw.githubusercontent.com/5Picklebarry/Scripts/main/ForRealiumBypasserKeyLess.lua', true)
     loadstring(script)()
+
+  elseif message == ".123" then
+    local script = game:HttpGet('https://raw.githubusercontent.com/lostbunny489/Iamdaddy/main/Code', true)
+    loadstring(script)()
   end
 end)
 
